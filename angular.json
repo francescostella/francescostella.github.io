@@ -123,8 +123,13 @@
               "devServerTarget": "francescostella:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "francescostella"
 }
