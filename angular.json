@@ -127,7 +127,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://francescostella.github.io/"
+            "baseHref": "https://francescostella.github.io/",
+            "branch": "master"
           }
         }
       }
