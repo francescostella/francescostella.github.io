@@ -1,0 +1,115 @@
+/*-----------------------------*\
+  COLORS: Basics
+/*-----------------------------*/
+$color-white:     #fff;
+$color-black:     #000;
+
+/*-----------------------------*\
+  COLORS: Theme sets
+/*-----------------------------*/
+
+// Set from Adobe Kuler: fighting fish theme
+$color-fighting-fish-1: #032340;
+$color-fighting-fish-2: #5B89A6;
+$color-fighting-fish-3: #F20505;
+$color-fighting-fish-4: #8C0303;
+$color-fighting-fish-5: #590202;
+
+// Set from https://coolors.co/134074-13315c-0b2545-8da9c4-eef4ed
+$color1-dark-cerulean: rgba(19, 64, 116, 1);
+$color2-prussian-blue: rgba(19, 49, 92, 1);
+$color3-oxford-blue: rgba(11, 37, 69, 1);
+$color4-pewter-blue: rgba(141, 169, 196, 1);
+$color5-isabelline: rgba(238, 244, 237, 1);
+
+// Set from https://colorhunt.co/palette/66990
+// $color-primary: #07689f;
+// $color-secondary: #a2d5f2;
+// $color-accent: #ff7e67;
+// $color-bg: #fafafa;
+
+
+// Set from https://colorhunt.co/palette/118585
+// $color-primary: #083358;
+// $color-secondary: #0f4471;
+// $color-accent: #fc3c3c;
+// $color-bg: #f6f6f6;
+
+/*-----------------------------*\
+  COLORS: Primary
+/*-----------------------------*/
+$color-primary: #07689f;
+$color-primary--light: lighten($color-primary, 5%);
+$color-primary--lighter: lighten($color-primary, 10%);
+$color-primary--dark: darken($color-primary, 5%);
+$color-primary--darker: darken($color-primary, 10%);
+
+
+/*-----------------------------*\
+  COLORS: Accent
+/*-----------------------------*/
+$color-accent: #ff7e67;
+$color-accent--light: lighten($color-accent, 5%);
+$color-accent--lighter: lighten($color-accent, 10%);
+$color-accent--dark: darken($color-accent, 5%);
+$color-accent--darker: darken($color-accent, 10%);
+
+/*-----------------------------*\
+  COLORS: UI
+/*-----------------------------*/
+$color-text: #3c3c3c;
+$color-background: #fafafa;
+$color-link: #a2d5f2;
+
+/*-----------------------------*\
+  COLORS: Feedback
+/*-----------------------------*/
+$color-error: #e02447;
+$color-success: #18af9a;
+$color-warning: #ffd138;
+$color-contrast-lower: #000;
+$color-contrast-low: #000;
+$color-contrast-medium: #000;
+$color-contrast-high: #000;
+$color-contrast-higher: #000;
+
+
+/*-----------------------------*\
+  COLORS: Map
+
+  Usage:
+  background-color: color(bg, secondary);
+/*-----------------------------*/
+
+$colors: (
+  bg: (
+    base: $color-background
+  ),
+  text: (
+    base: $color-text
+  ),
+  link: (
+    base: $color-link,
+    hover: $color-accent
+  )
+);
+
+
+/*-----------------------------*\
+  FONTS
+/*-----------------------------*/
+$font-open-sans: 'Open Sans';
+
+$open-sans-weights: (
+  light: 200,
+  book: 300,
+  roman: 400,
+  medium: 500,
+  black: 800,
+  heavy: 900
+);
+
+/*-----------------------------*\
+  GLOBALS
+/*-----------------------------*/
+$max-width-large-desktop: rem(1280px);

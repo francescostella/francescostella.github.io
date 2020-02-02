@@ -1,0 +1,30 @@
+// Viewport widths per breakpoints
+$breakpoint--small: rem(360px);
+$breakpoint--medium: rem(640px);
+$breakpoint--x-medium: rem(980px);
+$breakpoint--large: rem(1400px);
+
+// Grid widths
+$width-grid--small: rem(308px);
+$width-grid--medium: rem(576px);
+$width-grid--x-medium: rem(860px);
+$width-grid--large: rem(1280px);
+
+// Grid margins
+$margin-grid--small: rem(40px);
+$margin-grid--medium: rem(32px);
+$margin-grid--x-medium: rem(60px);
+$margin-grid--large: rem(60px);
+
+// Content grid
+// min-width is 360 as the viewport because
+// with the box-sizing set to border-box
+// the padding is calculated within it
+$content-grid-min-width: $breakpoint--small;
+$content-grid-max-width: rem(1280px);
+
+// Columns
+$cols--small-up: 8;
+$cols--x-medium-up: 16;
+
+$col-gap: rem(11px);

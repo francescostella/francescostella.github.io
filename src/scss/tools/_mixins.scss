@@ -1,0 +1,62 @@
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/*
+  Positioning helpers
+ */
+@mixin absolute-centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin absolute-stretched() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+}
+
+@mixin flex-center-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+};
+
+@mixin flex-vertical-center-content {
+  display: inline-flex;
+  align-items: center;
+};
+
+/*
+  Visual Treatments
+*/
+@mixin accessibility-hidden {
+  position: absolute;
+  display: block;
+  visibility: visible;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+}

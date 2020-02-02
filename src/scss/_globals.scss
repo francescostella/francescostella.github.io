@@ -1,0 +1,28 @@
+// !!! IMPORTANT !!!
+// The role of this file is to contain the @import
+// to settings, configuration, mixin & functions only
+// in order to be imported inside:
+// - styles.scss (once at the top)
+// - in each component SCSS file (at the top)
+//
+// DO NOT @import files with CSS selectors declaration in here
+
+/*-----------------------------*\
+	GLOBALS FUNCTIONS,
+  VARIABLES, etc
+\*-----------------------------*/
+
+/*-----------------------------*\
+	SETTINGS
+\*-----------------------------*/
+@import 'settings/variables';
+@import 'settings/breakpoints';
+@import 'settings/typography';
+@import 'settings/zindices';
+@import 'settings/grids';
+
+/*-----------------------------*\
+	TOOLS
+/*-----------------------------*/
+@import 'tools/functions';
+@import 'tools/mixins';
