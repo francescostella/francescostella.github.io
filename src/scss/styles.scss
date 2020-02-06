@@ -6,6 +6,14 @@
 @import 'globals';
 
 /*-----------------------------*\
+	Vendors
+\*-----------------------------*/
+@import '../../node_modules/uikit/dist/css/uikit.min.css';
+@import '../../node_modules/uikit/dist/css/uikit.css';
+@import '../../node_modules/uikit/dist/css/uikit-core.css';
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+
+/*-----------------------------*\
 	GENERIC AND BASE
 \*-----------------------------*/
 @import 'generic/base';
