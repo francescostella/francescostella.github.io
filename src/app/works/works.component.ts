@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { Apollo } from "apollo-angular";  
-import gql from "graphql-tag";  
-import WORKS_QUERY from "../apollo/queries/work/works";  
-import { Subscription } from "rxjs";
+import { Apollo } from 'apollo-angular';  
+import gql from 'graphql-tag';  
+import WORKS_QUERY from '../apollo/queries/work/works';  
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-works',
