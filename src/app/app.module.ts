@@ -6,19 +6,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MarkdownModule } from 'ngx-markdown'; 
 
 // Components
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { WorksComponent } from './works/works.component';
+import { WorkComponent } from './work/work.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
     WorksComponent,
+    WorkComponent
   ],
   imports: [
     BrowserModule,
+    MarkdownModule.forRoot(),
     AppRoutingModule,
     GraphQLModule,
     HttpClientModule

@@ -1,1 +1,19 @@
-<p>work works!</p>
+
+  <div class="uk-inline">
+    <img src="http://134.209.170.209:1337{{data.work.cover.url}}" alt="">
+    <div class="uk-overlay-default uk-position-cover"></div>
+    <div class="uk-overlay uk-position-center uk-dark">
+      <h1>{{ data.work.name }}</h1>
+    </div>
+  </div>
+
+<div class="uk-section" *ngIf="data.work">  
+  <div class="uk-container uk-container-small">
+    <p>
+      <markdown ngPreserveWhitespaces>
+        {{ data.work.description }}
+      </markdown>
+    </p>
+    <p></p>
+  </div>
+</div> 
