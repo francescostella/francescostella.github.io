@@ -12,13 +12,15 @@ import { MarkdownModule } from 'ngx-markdown';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { WorksComponent } from './works/works.component';
 import { WorkComponent } from './work/work.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
     WorksComponent,
-    WorkComponent
+    WorkComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

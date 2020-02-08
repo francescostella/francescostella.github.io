@@ -1,19 +1,23 @@
 <nav class="uk-navbar-container" uk-navbar>  
   <div class="uk-navbar-left">
     <ul class="uk-navbar-nav">
-      <li class="uk-active"><a href="#">Francesco</a></li>
+      <li class="uk-active">
+        <a href="#">
+          <span uk-icon="home"></span>
+        </a>
+      </li>
     </ul>
   </div>
 
   <div class="uk-navbar-right">
     <ul *ngIf="data" class="uk-navbar-nav">
-      <li *ngFor="let client of data.clients" class="uk-active">
+      <li class="uk-active">
         <a
-          routerLink="/client/{{ client.id }}"
+          routerLink="/works"
           routerLinkActive="active"
           class="uk-link-reset"
         >
-          {{ client.name }}
+          Works
         </a>
       </li>
     </ul>
