@@ -1,8 +1,8 @@
 <nav class="uk-navbar-container" uk-navbar>  
   <div class="uk-navbar-left">
     <ul class="uk-navbar-nav">
-      <li class="uk-active">
-        <a href="#">
+      <li routerLinkActive="uk-active">
+        <a routerLink="/">
           <span uk-icon="home"></span>
         </a>
       </li>
@@ -11,11 +11,9 @@
 
   <div class="uk-navbar-right">
     <ul *ngIf="data" class="uk-navbar-nav">
-      <li class="uk-active">
+      <li routerLinkActive="uk-active">
         <a
           routerLink="/works"
-          routerLinkActive="active"
-          class="uk-link-reset"
         >
           Works
         </a>
