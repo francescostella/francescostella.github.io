@@ -9,6 +9,9 @@ const WORK_QUERY = gql`
       description
       role
       url
+      skills {
+        name
+      }
       cover {
         url
       }

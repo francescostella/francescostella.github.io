@@ -1,23 +1,44 @@
 <div  
   id="banner"
-  class="uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-overlay"
+  class="uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-inline"
   [style.background-image]="
     'url(http://134.209.170.209:1337' + data.work.cover.url + ')'
   "
   uk-img
   *ngIf="data.work"
->
-
-  <h1>{{ data.work.name }}</h1>
+  >
+  <!-- <div class="uk-overlay-primary uk-position-cover"></div>
+  <h1 class="uk-overlay uk-position-center uk-light">{{ data.work.name }}</h1> -->
 </div>
 
 <div class="uk-section" *ngIf="data.work">  
   <div class="uk-container uk-container-small">
-    <p>
-      <markdown ngPreserveWhitespaces>
-        {{ data.work.description }}
-      </markdown>
-    </p>
-    <p></p>
+    <article class="uk-article">
+      <h1 class="uk-article-title uk-heading-line"><span>{{ data.work.name }}</span></h1>
+      <p class="uk-article-meta">{{ data.work.summary }}</p>
+      <ul class="uk-container uk-margin">
+        <li *ngFor="let skill of data.work.skills" class="uk-label">{{skill.name}}</li>
+      </ul>
+      <dl class="uk-description-list">
+        <dt>Client</dt>
+        <dd>{{ data.work.client.name }}</dd>
+        <dt>Role</dt>
+        <dd>{{ data.work.role }}</dd>
+        <dt>Company</dt>
+        <dd>{{ data.work.company.name }}</dd>
+        <dt>Description</dt>
+        <dd>
+          <markdown ngPreserveWhitespaces>
+            {{ data.work.description }}
+          </markdown>
+        </dd>
+      </dl>
+      <hr>
+      <div class="uk-grid-small uk-child-width-auto" uk-grid>
+        <div>
+          <a class="uk-button uk-button-text" href="#">See more Works for the same client</a>
+        </div>
+      </div>
+  </article>
   </div>
 </div> 

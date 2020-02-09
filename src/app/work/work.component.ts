@@ -33,7 +33,6 @@ export class WorkComponent implements OnInit {
       })
       .valueChanges.subscribe(result => {
         this.data = result.data;
-        console.log(this.data);
         this.loading = result.loading;
         this.errors = result.errors;
       });
