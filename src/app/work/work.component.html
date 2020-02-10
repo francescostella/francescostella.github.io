@@ -14,22 +14,22 @@
 <div class="uk-section" *ngIf="data.work">  
   <div class="uk-container uk-container-small">
     <article class="uk-article">
-      <h1 class="uk-article-title uk-heading-line"><span>{{ data.work.name }}</span></h1>
-      <p class="uk-article-meta">{{ data.work.summary }}</p>
-      <ul class="uk-container uk-margin">
-        <li *ngFor="let skill of data.work.skills" class="uk-label">{{skill.name}}</li>
+      <h1 class="uk-article-title uk-heading-line uk-margin-remove"><span>{{ data.work?.name }}</span></h1>
+      <p class="uk-article-meta uk-margin-remove">{{ data.work?.summary }}</p>
+      <ul class="uk-container uk-margin" uk-margin>
+        <li *ngFor="let skill of data.work.skills" class="uk-label uk-margin-small-right">{{skill.name}}</li>
       </ul>
       <dl class="uk-description-list">
-        <dt>Client</dt>
-        <dd>{{ data.work.client.name }}</dd>
-        <dt>Role</dt>
-        <dd>{{ data.work.role }}</dd>
-        <dt>Company</dt>
-        <dd>{{ data.work.company.name }}</dd>
-        <dt>Description</dt>
+        <dt class="uk-text-bold">Client</dt>
+        <dd>{{ data.work?.client?.name }}</dd>
+        <dt class="uk-text-bold">Role</dt>
+        <dd>{{ data.work?.role }}</dd>
+        <dt class="uk-text-bold">Company</dt>
+        <dd>{{ data.work?.company?.name }}</dd>
+        <dt class="uk-text-bold">Description</dt>
         <dd>
           <markdown ngPreserveWhitespaces>
-            {{ data.work.description }}
+            {{ data.work?.description }}
           </markdown>
         </dd>
       </dl>
