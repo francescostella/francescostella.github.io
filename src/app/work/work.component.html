@@ -1,21 +1,21 @@
-<div  
-  id="banner"
-  class="uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-inline"
+<div id="banner" class="uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-inline"
   [style.background-image]="
     'url(http://134.209.170.209:1337' + data.work.cover.url + ')'
-  "
-  uk-img
-  *ngIf="data.work"
-  >
+  " uk-img *ngIf="data.work">
   <!-- <div class="uk-overlay-primary uk-position-cover"></div>
   <h1 class="uk-overlay uk-position-center uk-light">{{ data.work.name }}</h1> -->
 </div>
 
-<div class="uk-section" *ngIf="data.work">  
+<div class="uk-section" *ngIf="data.work">
   <div class="uk-container uk-container-small">
     <article class="uk-article">
-      <h1 class="uk-article-title uk-heading-line uk-margin-remove"><span>{{ data.work?.name }}</span></h1>
-      <p class="uk-article-meta uk-margin-remove">{{ data.work?.summary }}</p>
+      <p class="uk-text-large">
+        {{ data.work?.summary }}
+      </p>
+      <h1 class="uk-article-title uk-heading-line uk-margin-remove">
+        <span>{{ data.work?.name }}</span>
+      </h1>
+      <p class="uk-article-meta uk-margin-remove">{{ data.work?.highlights }}</p>
       <ul class="uk-container uk-margin" uk-margin>
         <li *ngFor="let skill of data.work.skills" class="uk-label uk-margin-small-right">{{skill.name}}</li>
       </ul>
@@ -26,19 +26,18 @@
         <dd>{{ data.work?.role }}</dd>
         <dt class="uk-text-bold">Company</dt>
         <dd>{{ data.work?.company?.name }}</dd>
-        <dt class="uk-text-bold">Description</dt>
-        <dd>
-          <markdown ngPreserveWhitespaces>
-            {{ data.work?.description }}
-          </markdown>
-        </dd>
       </dl>
+      <p class="uk-text-small">
+        <markdown ngPreserveWhitespaces>
+          {{ data.work?.description }}
+        </markdown>
+      </p>
       <hr>
       <div class="uk-grid-small uk-child-width-auto" uk-grid>
         <div>
           <a class="uk-button uk-button-text" href="#">See more Works for the same client</a>
         </div>
       </div>
-  </article>
+    </article>
   </div>
-</div> 
+</div>

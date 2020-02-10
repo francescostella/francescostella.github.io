@@ -6,6 +6,7 @@ const WORK_QUERY = gql`
       id
       name
       summary
+      highlights
       description
       role
       url
