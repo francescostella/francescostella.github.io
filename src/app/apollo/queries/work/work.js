@@ -8,7 +8,9 @@ const WORK_QUERY = gql`
       summary
       highlights
       description
-      role
+      title {
+        name
+      }
       url
       skills {
         name

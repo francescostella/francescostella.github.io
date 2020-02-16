@@ -17,8 +17,21 @@ h1 {
   font-size: 120px;
 }
 
-.title {
-  font-family: 'Montserrat', sans-serif;
+.t-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 61.2px;
+  line-height: 1.1;
+  color: #292c3d;
+  font-family: Raleway;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.t-splash {
+  background: url('https://demo.yootheme.com/themes/joomla/2017/fjord/images/yootheme/home-header-splash.png') 50% 50% no-repeat;
+  background-size: contain;
+  padding: 135px 0;
 }
 
 #client {

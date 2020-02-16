@@ -2,8 +2,6 @@
   [style.background-image]="
     'url(http://134.209.170.209:1337' + data.work.cover.url + ')'
   " uk-img *ngIf="data.work">
-  <!-- <div class="uk-overlay-primary uk-position-cover"></div>
-  <h1 class="uk-overlay uk-position-center uk-light">{{ data.work.name }}</h1> -->
 </div>
 
 <div class="uk-section" *ngIf="data.work">
@@ -20,12 +18,14 @@
         <li *ngFor="let skill of data.work.skills" class="uk-label uk-margin-small-right">{{skill.name}}</li>
       </ul>
       <dl class="uk-description-list">
-        <dt class="uk-text-bold">Client</dt>
+        <dt>Client</dt>
         <dd>{{ data.work?.client?.name }}</dd>
-        <dt class="uk-text-bold">Role</dt>
-        <dd>{{ data.work?.role }}</dd>
-        <dt class="uk-text-bold">Company</dt>
+        <dt>Role</dt>
+        <dd>{{ data.work?.title.name }}</dd>
+        <dt>Company</dt>
         <dd>{{ data.work?.company?.name }}</dd>
+        <dt *ngIf="data.work?.url">URL</dt>
+        <dd *ngIf="data.work?.url"><a href="{{data.work?.url}}" target="_blank"><span uk-icon="link"></span>{{data.work?.url}}</a></dd>
       </dl>
       <p class="uk-text-small">
         <markdown ngPreserveWhitespaces>
