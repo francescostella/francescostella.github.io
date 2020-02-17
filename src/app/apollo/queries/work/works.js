@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 const WORKS_QUERY = gql`  
   query Works {
-    works {
+    works(sort: "id:desc") {
       id
       name
       client {
