@@ -13,37 +13,22 @@ const routes: Routes = [
   {
     path: '',
     component: HomeScreenComponent,
-    data: {
-      screen: 'home'
-    }
   },
   {
     path: 'works',
     component: WorksScreenComponent,
-    data: {
-      screen: 'works'
-    }
   },
   {
     path: 'work/:id',
     component: WorkDetailsScreenComponent,
-    data: {
-      screen: 'work'
-    }
   },
   {
     path: 'about',
     component: AboutScreenComponent,
-    data: {
-      screen: 'about'
-    }
   },
   {
     path: 'contact',
     component: ContactScreenComponent,
-    data: {
-      screen: 'contact'
-    }
   },
 ];
 
