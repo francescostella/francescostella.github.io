@@ -6,6 +6,7 @@ import { WorksScreenComponent } from './works-screen/works-screen.component';
 import { WorkDetailsScreenComponent } from './work-details-screen/work-details-screen.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { AboutScreenComponent } from './about-screen/about-screen.component';
+import { ContactScreenComponent } from './contact-screen/contact-screen.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutScreenComponent
+  },
+  {
+    path: 'contact',
+    component: ContactScreenComponent
   },
 ];
 

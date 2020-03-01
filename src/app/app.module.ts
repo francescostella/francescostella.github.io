@@ -14,6 +14,7 @@ import { WorksScreenComponent } from './works-screen/works-screen.component';
 import { WorkDetailsScreenComponent } from './work-details-screen/work-details-screen.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { AboutScreenComponent } from './about-screen/about-screen.component';
+import { ContactScreenComponent } from './contact-screen/contact-screen.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AboutScreenComponent } from './about-screen/about-screen.component';
     WorksScreenComponent,
     WorkDetailsScreenComponent,
     HomeScreenComponent,
-    AboutScreenComponent
+    AboutScreenComponent,
+    ContactScreenComponent
   ],
   imports: [
     BrowserModule,
