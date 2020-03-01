@@ -6,13 +6,26 @@
 @import 'globals';
 
 /*-----------------------------*\
+	UIKIT - (do not move)
+	custom variables and variable overwrites
+\*-----------------------------*/
+$global-font-family: $primary-font-stack;
+$base-heading-font-family: $secondary-font-stack;
+$base-heading-font-weight: 700;
+// @import "theme/accordion.scss";
+// @import "theme/alert.scss";
+// @import "theme/align.scss";
+
+/*-----------------------------*\
+	UIKIT - Main globals (do not move)
+\*-----------------------------*/
+@import '../../node_modules/uikit/src/scss/variables-theme.scss';
+@import '../../node_modules/uikit/src/scss/mixins-theme.scss';
+
+/*-----------------------------*\
 	Vendors
 \*-----------------------------*/
-@import '../../node_modules/uikit/dist/css/uikit.min.css';
-@import '../../node_modules/uikit/dist/css/uikit.css';
-@import '../../node_modules/uikit/dist/css/uikit-core.css';
-@import url('https://fonts.googleapis.com/css?family=Staatliches');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Rubik:400,700&display=swap&effect=anaglyph');
 
 /*-----------------------------*\
 	GENERIC AND BASE
@@ -26,3 +39,16 @@
 	SHARED/COMMON ELEMENTS/OBJECTS
 \*-----------------------------*/
 @import 'common/buttons';
+
+/*-----------------------------*\ 	
+	UIKIT - (do not move)
+	custom mixin overwrites.
+\*-----------------------------*/
+// @import "theme/accordion-mixins.scss";
+// @import "theme/alert-mixins.scss";
+// @import "theme/align-mixins.scss";
+
+/*-----------------------------*\
+	UIKIT - Core (do not move)
+\*-----------------------------*/
+@import '../../node_modules/uikit/src/scss/uikit-theme.scss';

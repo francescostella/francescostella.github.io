@@ -1,0 +1,28 @@
+@import '~scss/globals.scss';
+
+.main-nav {
+  &__link {
+    position: relative;
+    
+    a::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      height: 1px;
+      background-color: transparent;
+      transition: .1s ease-in-out;
+      transition-property: background-color,border-color,box-shadow,height,right;
+      left: 0;
+      right: 0;
+    }
+
+    &.uk-active {
+      a::before {
+        background-color: $color-accent;
+        height: 2px;
+      }
+    }
+  }
+}

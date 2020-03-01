@@ -73,32 +73,11 @@ $color-contrast-medium: #000;
 $color-contrast-high: #000;
 $color-contrast-higher: #000;
 
-
-/*-----------------------------*\
-  COLORS: Map
-
-  Usage:
-  background-color: color(bg, secondary);
-/*-----------------------------*/
-
-$colors: (
-  bg: (
-    base: $color-background
-  ),
-  text: (
-    base: $color-text
-  ),
-  link: (
-    base: $color-link,
-    hover: $color-accent
-  )
-);
-
-
 /*-----------------------------*\
   FONTS
 /*-----------------------------*/
-$font-open-sans: 'Open Sans';
+$primary-font-stack: Montserrat, system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+$secondary-font-stack: Rubik, system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
 $open-sans-weights: (
   light: 200,

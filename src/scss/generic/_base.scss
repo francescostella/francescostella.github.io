@@ -1,65 +1,14 @@
+
 body {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
-  color: $color-text;
-  background-color: $color-background;
-  box-sizing: border-box;
+    box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {  
-  text-decoration: none;
-}
-
-h1 {  
-  font-family: Staatliches;
-  font-size: 120px;
-}
-
-.t-title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 61.2px;
-  line-height: 1.1;
-  color: #292c3d;
-  font-family: Raleway;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0;
-}
-
-.t-splash {
+.lead-hero {
   background: url('https://demo.yootheme.com/themes/joomla/2017/fjord/images/yootheme/home-header-splash.png') 50% 50% no-repeat;
   background-size: contain;
-  padding: 135px 0;
-}
-
-#client {
-  font-family: Staatliches;
-  font-weight: 500;
-}
-
-#name {
-  letter-spacing: 0.4px;
-  font-size: 22px;
-  font-size: 1.375rem;
-  line-height: 1.13636;
-}
-
-#banner {
-  margin: 20px;
-  height: 60vw;
-  max-height: 60vh;
-}
-
-#editor {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.75;
-}
-
-.uk-navbar-container {
-  font-family: Staatliches;
+  padding: 160px 0 !important;
 }
 
 img:hover {  
