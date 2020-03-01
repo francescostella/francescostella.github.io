@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class HomeScreenComponent implements OnInit {
   title = 'Francesco Stella';
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit() {
+    // this.route.data.subscribe(data => {
+    //   console.log(data);
+    // });
   }
 
 }

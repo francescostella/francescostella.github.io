@@ -12,23 +12,38 @@ import { ContactScreenComponent } from './contact-screen/contact-screen.componen
 const routes: Routes = [
   {
     path: '',
-    component: HomeScreenComponent
+    component: HomeScreenComponent,
+    data: {
+      screen: 'home'
+    }
   },
   {
     path: 'works',
-    component: WorksScreenComponent
+    component: WorksScreenComponent,
+    data: {
+      screen: 'works'
+    }
   },
   {
     path: 'work/:id',
-    component: WorkDetailsScreenComponent
+    component: WorkDetailsScreenComponent,
+    data: {
+      screen: 'work'
+    }
   },
   {
     path: 'about',
-    component: AboutScreenComponent
+    component: AboutScreenComponent,
+    data: {
+      screen: 'about'
+    }
   },
   {
     path: 'contact',
-    component: ContactScreenComponent
+    component: ContactScreenComponent,
+    data: {
+      screen: 'contact'
+    }
   },
 ];
 

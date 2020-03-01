@@ -24,5 +24,19 @@
         height: 2px;
       }
     }
+
+    a {
+      .home-screen & {
+        color: #fff;
+      }
+    }
+  }
+
+  .uk-navbar-left {
+    .uk-icon {
+      .home-screen & {
+        display: none;
+      }
+    }
   }
 }

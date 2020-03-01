@@ -1,37 +1,39 @@
-<nav class="main-nav uk-navbar-container uk-navbar-transparent" uk-navbar uk-sticky>  
-  <div class="uk-navbar-left">
-    <ul class="uk-navbar-nav">
-      <li routerLinkActive="uk-active">
-        <a routerLink="/">
-          <span uk-icon="home"></span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="uk-navbar-right">
-    <ul class="uk-navbar-nav">
-      <li class="main-nav__link" routerLinkActive="uk-active">
-        <a routerLink="/works">
-          Works
-        </a>
-      </li>
-
-      <li class="main-nav__link">
-        <a>|</a>
-      </li>
-
-      <li class="main-nav__link" routerLinkActive="uk-active">
-        <a routerLink="/about">
-          About me
-        </a>
-      </li>
-
-      <li class="main-nav__link" routerLinkActive="uk-active">
-        <a routerLink="/contact">
-          Contact
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav> 
+<section class="main-nav uk-position-fixed uk-width-expand uk-position-z-index" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-dark; top: 200">
+  <nav class="uk-navbar-container" uk-navbar>  
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <li routerLinkActive="uk-active">
+          <a routerLink="/">
+            <span uk-icon="home"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li class="main-nav__link" routerLinkActive="uk-active">
+          <a routerLink="/works">
+            Works
+          </a>
+        </li>
+  
+        <li class="main-nav__link">
+          <a>|</a>
+        </li>
+  
+        <li class="main-nav__link" routerLinkActive="uk-active">
+          <a routerLink="/about">
+            About me
+          </a>
+        </li>
+  
+        <li class="main-nav__link" routerLinkActive="uk-active">
+          <a routerLink="/contact">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav> 
+</section>
