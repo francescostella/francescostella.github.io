@@ -3,6 +3,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Apollo } from 'apollo-angular';  
 import gql from 'graphql-tag';  
 import WORKS_QUERY from '../apollo/queries/work/works';  
+import CLIENTS_QUERY from '../apollo/queries/client/clients';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -17,6 +18,7 @@ export class WorksScreenComponent implements OnInit, OnDestroy {
   listWorks: any[];
 
   private queryWorks: Subscription;
+  private queryClients: Subscription;
 
   constructor(
     private apollo: Apollo
@@ -33,10 +35,21 @@ export class WorksScreenComponent implements OnInit, OnDestroy {
         this.loading = result.loading;
         this.errors = result.errors;
       });
+
+    this.queryClients = this.apollo
+      .watchQuery({
+        query: CLIENTS_QUERY
+      })
+      .valueChanges.subscribe(result => {
+        this.data = result.data;
+        this.loading = result.loading;
+        this.errors = result.errors;
+      });
   }
 
   ngOnDestroy() {
     this.queryWorks.unsubscribe();
+    this.queryClients.unsubscribe();
   }
 
 }
