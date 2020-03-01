@@ -2,23 +2,23 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Components
-import { WorksComponent } from './works/works.component';
-import { WorkComponent } from './work/work.component';
-import { HomeComponent } from './home/home.component';
+import { WorksScreenComponent } from './works-screen/works-screen.component';
+import { WorkDetailsScreenComponent } from './work-details-screen/work-details-screen.component';
+import { HomeScreenComponent } from './home-screen/home-screen.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeScreenComponent
   },
   {
     path: 'works',
-    component: WorksComponent
+    component: WorksScreenComponent
   },
   {
     path: 'work/:id',
-    component: WorkComponent
+    component: WorkDetailsScreenComponent
   },
 ];
 

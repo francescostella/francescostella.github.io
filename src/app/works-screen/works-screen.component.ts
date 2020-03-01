@@ -7,10 +7,10 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-works',
-  templateUrl: './works.component.html',
-  styleUrls: ['./works.component.scss']
+  templateUrl: './works-screen.component.html',
+  styleUrls: ['./works-screen.component.scss']
 })
-export class WorksComponent implements OnInit, OnDestroy {
+export class WorksScreenComponent implements OnInit, OnDestroy {
   data: any = {};
   loading = true;
   errors: any;

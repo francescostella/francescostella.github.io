@@ -8,10 +8,10 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-work',
-  templateUrl: './work.component.html',
-  styleUrls: ['./work.component.scss']
+  templateUrl: './work-details-screen.component.html',
+  styleUrls: ['./work-details-screen.component.scss']
 })
-export class WorkComponent implements OnInit {
+export class WorkDetailsScreenComponent implements OnInit {
   data: any = {};
   loading = true;
   errors: any;
