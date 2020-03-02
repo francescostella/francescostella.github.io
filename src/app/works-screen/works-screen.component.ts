@@ -5,6 +5,8 @@ import gql from 'graphql-tag';
 import WORKS_QUERY from '../apollo/queries/work/works';  
 import CLIENTS_QUERY from '../apollo/queries/client/clients';
 import { Subscription } from 'rxjs';
+import { ContentfulService } from 'app/contentful.service';
+import { Entry } from 'contentful';
 
 @Component({
   selector: 'app-works',
@@ -17,14 +19,19 @@ export class WorksScreenComponent implements OnInit, OnDestroy {
   errors: any;
   listWorks: any[];
 
+  public works: Entry<any>[] = [];
   private queryWorks: Subscription;
   private queryClients: Subscription;
 
   constructor(
-    private apollo: Apollo
+    private apollo: Apollo,
+    private contentfulService: ContentfulService
   ) { }
 
   ngOnInit() {
+    this.contentfulService.getWorks()
+      .then(works => this.works = works);
+
     this.queryWorks = this.apollo
       .watchQuery({
         query: WORKS_QUERY

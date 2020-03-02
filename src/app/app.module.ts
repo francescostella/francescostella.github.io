@@ -16,6 +16,14 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { AboutScreenComponent } from './about-screen/about-screen.component';
 import { ContactScreenComponent } from './contact-screen/contact-screen.component';
 
+// Services
+import { ContentfulService } from './contentful.service';
+
+(window as any).process = {
+  env: { DEBUG: undefined },
+  browser: 'dummy'
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +41,9 @@ import { ContactScreenComponent } from './contact-screen/contact-screen.componen
     GraphQLModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ContentfulService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
