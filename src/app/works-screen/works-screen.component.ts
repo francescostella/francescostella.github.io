@@ -19,7 +19,7 @@ export class WorksScreenComponent implements OnInit, OnDestroy {
   errors: any;
   listWorks: any[];
 
-  public works: Entry<any>[] = [];
+  public workItems: Entry<any>[] = [];
   private queryWorks: Subscription;
   private queryClients: Subscription;
 
@@ -30,7 +30,9 @@ export class WorksScreenComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.contentfulService.getWorks()
-      .then(works => this.works = works);
+      .then((works) => {
+        this.workItems = works['items'];
+      });
 
     this.queryWorks = this.apollo
       .watchQuery({
@@ -52,6 +54,14 @@ export class WorksScreenComponent implements OnInit, OnDestroy {
         this.loading = result.loading;
         this.errors = result.errors;
       });
+  }
+
+  getClientName(work) {
+    return work?.fields?.client?.fields?.name;
+  }
+
+  getCoverUrl(work) {
+    return work?.fields?.cover?.fields?.file?.url;
   }
 
   ngOnDestroy() {

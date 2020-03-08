@@ -25,8 +25,10 @@ export class ContentfulService {
 
   getWorks(query?: object): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({
-      content_type: CONFIG.contentTypeIds.work
+      content_type: CONFIG.contentTypeIds.work,
+      select: 'sys.id,fields.name,fields.client,fields.cover',
+      include: 1
     }, query))
-    .then(res => res.items);
+    .then();
   }
 }
