@@ -5,6 +5,7 @@ import gql from 'graphql-tag';
 import WORK_QUERY from '../apollo/queries/work/work';  
 import { ActivatedRoute } from '@angular/router';  
 import { Subscription } from 'rxjs';
+import { environment } from 'environments/environment';
 
 @Component({
   selector: 'app-work',
@@ -16,6 +17,7 @@ export class WorkDetailsScreenComponent implements OnInit {
   loading = true;
   errors: any;
 
+  public apiUrl = environment.apiUrl;
   private queryWork: Subscription;
 
   constructor(

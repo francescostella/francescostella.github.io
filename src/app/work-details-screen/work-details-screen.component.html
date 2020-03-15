@@ -1,7 +1,7 @@
 <section class="work-details-screen">
   <div class="uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-inline"
     [style.background-image]="
-      'url(http://134.209.170.209:1337' + data.work?.cover?.url + ')'
+      'url(apiUrl' + data.work?.cover?.url + ')'
     " uk-img *ngIf="data.work?.cover">
   </div>
 

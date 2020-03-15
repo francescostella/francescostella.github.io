@@ -7,6 +7,7 @@ import CLIENTS_QUERY from '../apollo/queries/client/clients';
 import { Subscription } from 'rxjs';
 import { ContentfulService } from 'app/contentful.service';
 import { Entry } from 'contentful';
+import { environment } from 'environments/environment';
 
 @Component({
   selector: 'app-works',
@@ -19,6 +20,7 @@ export class WorksScreenComponent implements OnInit, OnDestroy {
   errors: any;
   listWorks: any[];
 
+  public apiUrl = environment.apiUrl;
   public workItems: Entry<any>[] = [];
   private queryWorks: Subscription;
   private queryClients: Subscription;
