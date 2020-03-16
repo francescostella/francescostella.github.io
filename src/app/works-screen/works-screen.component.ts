@@ -5,8 +5,6 @@ import gql from 'graphql-tag';
 import WORKS_QUERY from '../apollo/queries/work/works';  
 import CLIENTS_QUERY from '../apollo/queries/client/clients';
 import { Subscription } from 'rxjs';
-import { ContentfulService } from 'app/contentful.service';
-import { Entry } from 'contentful';
 import { environment } from 'environments/environment';
 
 @Component({
@@ -21,21 +19,14 @@ export class WorksScreenComponent implements OnInit, OnDestroy {
   listWorks: any[];
 
   public apiUrl = environment.apiUrl;
-  public workItems: Entry<any>[] = [];
   private queryWorks: Subscription;
   private queryClients: Subscription;
 
   constructor(
     private apollo: Apollo,
-    private contentfulService: ContentfulService
   ) { }
 
   ngOnInit() {
-    this.contentfulService.getWorks()
-      .then((works) => {
-        this.workItems = works['items'];
-      });
-
     this.queryWorks = this.apollo
       .watchQuery({
         query: WORKS_QUERY
@@ -56,14 +47,6 @@ export class WorksScreenComponent implements OnInit, OnDestroy {
         this.loading = result.loading;
         this.errors = result.errors;
       });
-  }
-
-  getClientName(work) {
-    return work?.fields?.client?.fields?.name;
-  }
-
-  getCoverUrl(work) {
-    return work?.fields?.cover?.fields?.file?.url;
   }
 
   ngOnDestroy() {

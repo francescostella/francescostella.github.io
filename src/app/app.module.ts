@@ -17,7 +17,7 @@ import { AboutScreenComponent } from './about-screen/about-screen.component';
 import { ContactScreenComponent } from './contact-screen/contact-screen.component';
 
 // Services
-import { ContentfulService } from './contentful.service';
+
 
 (window as any).process = {
   env: { DEBUG: undefined },
@@ -41,9 +41,7 @@ import { ContentfulService } from './contentful.service';
     GraphQLModule,
     HttpClientModule
   ],
-  providers: [
-    ContentfulService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
