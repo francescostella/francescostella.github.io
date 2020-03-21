@@ -6,7 +6,7 @@ const WORK_QUERY = gql`
       id
       name
       summary
-      highlights
+      Highlights
       description
       title {
         name
