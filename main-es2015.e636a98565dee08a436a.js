@@ -26,7 +26,7 @@
       id
       name
       summary
-      highlights
+      Highlights
       description
       title {
         name
