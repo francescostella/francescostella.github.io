@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/francescostella/francescostella.github.io/compare/v0.0.1...v0.0.2) (2020-04-07)
+
+
+### Features
+
+* add new api.francesco.work domain to envs ([1ac8b3e](https://github.com/francescostella/francescostella.github.io/commit/1ac8b3e6233cb6e094769ed27bd130ee95f580e9))
+* **graphql:** adjust char case for 'highlights ([095f44e](https://github.com/francescostella/francescostella.github.io/commit/095f44ebfa714f2b678cde244fdc9280b9390990))
+* **services:** remove Contentful ([cd8292d](https://github.com/francescostella/francescostella.github.io/commit/cd8292d779997789ec4638662a485861ad9b023d))
+* parametize apiUrl in environment files ([600178e](https://github.com/francescostella/francescostella.github.io/commit/600178eb8d77132caa99c282e5b4b15a3242d988))
+
 ### 0.0.1 (2020-03-08)
 
 
