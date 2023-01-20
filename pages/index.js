@@ -15,17 +15,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Visit my portfolio at{' '}
-            <a href="https://francesco.work/">https://francesco.work</a>
-          </p>
-        </div>
-
         <div className={styles.center}>
           <div className={styles.thirteen}>
             <h1>Francesco Stella</h1>
-            <p>Senior Web Engineer</p>
+            <h3>Senior Web Engineer</h3>
+              <p>
+                Visit my <a href="https://francesco.work/"><b>portfolio</b></a>
+              </p>
           </div>
         </div>
       </main>
